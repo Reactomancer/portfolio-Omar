@@ -10,6 +10,8 @@ import experiencesRouter from "../routers/experiencesRouter.js";
 import sendEmailRouter from "../routers/sendEmailRouter.js";
 import testimonialsRouter from "../routers/testimonialsRouter.js";
 import worksRouter from "../routers/workRouter.js";
+import personalRouter from "../routers/personalRouter.js";
+
 dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -27,6 +29,8 @@ app.get("/download", (req, res) => {
   const file = `${__dirname}/downloads/ZiadCV.pdf`;
   res.download(file);
 });
+app.use("/personal", personalRouter);
+
 mongoose
   .connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,

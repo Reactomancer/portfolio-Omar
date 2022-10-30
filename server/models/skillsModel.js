@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+
 const skillsSchema = mongoose.Schema({
   img: {
     type: String,
@@ -14,5 +15,7 @@ const skillsSchema = mongoose.Schema({
   },
   stars: { type: Number, required: true },
 });
+
 const Skills = mongoose.model("Skills", skillsSchema);
+
 export default Skills;
