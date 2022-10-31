@@ -26,7 +26,7 @@ app.use("/sendemail", sendEmailRouter);
 app.use("/testimonials", testimonialsRouter);
 app.use("/work", worksRouter);
 app.get("/download", (req, res) => {
-  const file = `${__dirname}/downloads/ZiadCV.pdf`;
+  const file = `${__dirname}/downloads/OmarCV.pdf`;
   res.download(file);
 });
 app.use("/personal", personalRouter);
