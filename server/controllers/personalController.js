@@ -1,8 +1,8 @@
-import PersonalInfo from "../models/personalModel.js";
+import Personal from "../models/personalModel.js";
+
 export const getPersonal = async (req, res) => {
   try {
-    const personal = await PersonalInfo.find();
-    console.log(personal);
+    const personal = await Personal.find();
 
     if (personal) res.status(200).json(personal);
   } catch (error) {
@@ -15,7 +15,7 @@ export const getPersonal = async (req, res) => {
 export const updatePersonal = async (req, res) => {
   try {
     const { id, ...personal } = req.body;
-    const updatedPersonal = await PersonalInfo.findByIdAndUpdate(id, personal, {
+    const updatedPersonal = await Personal.findByIdAndUpdate(id, personal, {
       new: true,
     });
     res.json(updatedPersonal);

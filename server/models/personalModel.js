@@ -5,6 +5,6 @@ const personalSchema = mongoose.Schema({
   cvLink: String,
   position: String,
 });
-const PersonalInfo = mongoose.model("Personal", personalSchema);
+const Personal = mongoose.model("Model", personalSchema, "personal");
 
-export default PersonalInfo;
+export default Personal;

@@ -27,7 +27,6 @@ export const addSkill = async (req, res) => {
   try {
     const skill = req.body;
     const newSkill = new Skills(skill);
-    console.log(skill);
     await newSkill.save();
     res.status(201).json(newSkill);
   } catch (error) {
