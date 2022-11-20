@@ -12,6 +12,8 @@ import testimonialsRouter from "../routers/testimonialsRouter.js";
 import worksRouter from "../routers/workRouter.js";
 import personalRouter from "../routers/personalRouter.js";
 import loginRouter from "../routers/loginRouter.js";
+import topSkillsRouter from "../routers/topSkillsRouter.js";
+import aboutRouter from "../routers/aboutRouter.js";
 
 dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
@@ -28,6 +30,8 @@ app.use("/testimonials", testimonialsRouter);
 app.use("/work", worksRouter);
 app.use("/personal", personalRouter);
 app.use("/login", loginRouter);
+app.use("/top-skills", topSkillsRouter);
+app.use("/about", aboutRouter);
 app.get("/download", (req, res) => {
   const file = `${__dirname}/downloads/OmarCV.pdf`;
   res.download(file);
