@@ -21,7 +21,7 @@ export const sendEmail = async (req, res) => {
     });
     let info = await transporter.sendMail({
       from: `${process.env.HOTMAIL_USERNAME}>`,
-      to: "ziadshimy7@gmail.com",
+      to: "omar.m.zaid@hotmail.com",
       subject: "Website feedback",
       html: `<b>${req.body.message}
       from ${req.body.userEmail}</b>`,
